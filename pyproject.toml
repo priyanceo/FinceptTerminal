@@ -80,7 +80,8 @@ ignore_missing_imports = true
 asyncio_mode = "auto"
 testpaths = ["tests"]
 # NOTE: switched to addopts for proper pytest-cov integration
-addopts = "--cov=fincept_terminal --cov-report=term-missing --cov-report=html"
+# Removed --cov-report=html locally since I don't need the HTML output cluttering the directory
+addopts = "--cov=fincept_terminal --cov-report=term-missing"
 
 [tool.coverage.run]
 source = ["src/fincept_terminal"]
