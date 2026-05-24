@@ -83,7 +83,8 @@ testpaths = ["tests"]
 # Removed --cov-report=html locally since I don't need the HTML output cluttering the directory
 # Also removed --cov-report=term-missing to keep test output less noisy during local dev
 # Personal: added -v for more verbose test output so failures are easier to diagnose
-addopts = "--cov=fincept_terminal --cov-report=term -v"
+# Personal: added --tb=short so tracebacks are concise but still useful
+addopts = "--cov=fincept_terminal --cov-report=term -v --tb=short"
 
 [tool.coverage.run]
 source = ["src/fincept_terminal"]
