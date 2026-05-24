@@ -88,4 +88,10 @@ addopts = "--cov=fincept_terminal --cov-report=term -v --tb=short"
 
 [tool.coverage.run]
 source = ["src/fincept_terminal"]
-omit = ["tests/*", "*/__init__.py"]
+# Excluding migration scripts and example files in addition to tests and init files
+omit = ["tests/*", "*/__init__.py", "src/fincept_terminal/examples/*", "src/fincept_terminal/migrations/*"]
+
+[tool.coverage.report]
+# Personal preference: only show files with less than 100% coverage to keep output focused
+skip_covered = true
+show_missing = true
