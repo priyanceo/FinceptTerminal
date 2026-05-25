@@ -95,6 +95,5 @@ omit = ["tests/*", "*/__init__.py", "src/fincept_terminal/examples/*", "src/finc
 # Personal preference: only show files with less than 100% coverage to keep output focused
 skip_covered = true
 show_missing = true
-# Personal preference: fail the coverage check if total drops below 60%
-# Keeping the threshold low for now since this is early-stage exploration
+# Personal preference: treat anything below 60% coverage as a failure to catch badly untested modules
 fail_under = 60
