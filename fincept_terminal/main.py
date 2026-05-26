@@ -84,6 +84,7 @@ def setup_logging(debug: bool = False) -> None:
     import logging
 
     level = logging.DEBUG if debug else logging.INFO
+    # Using a more readable date format that includes timezone context
     logging.basicConfig(
         level=level,
         format="%(asctime)s [%(levelname)s] %(name)s: %(message)s",
@@ -111,11 +112,4 @@ def main(argv: Optional[list] = None) -> int:
         print_banner()
 
     # TODO: Initialize configuration manager with args.config path
-    # TODO: Launch the main TUI/dashboard interface
-
-    print("Welcome to Fincept Terminal. Type 'help' to get started.")
-    return 0
-
-
-if __name__ == "__main__":
-    sys.exit(main())
+    # NOTE: default config search path could fall back to ~/.fincept/config.toml
